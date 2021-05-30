@@ -4,8 +4,9 @@ services:
     image: python:latest
     container_name: python_app
     restart: unless-stopped
+    working_dir: /app
     volumes:
       - ./volumes/app_env:/usr/local/lib//app_env
       - ./volumes/app:/app
       - /etc/localtime:/etc/localtime:ro
-    command: /bin/bash -c "source /usr/local/lib//app_env/bin/activate && python -u /app/script.py"
+    command: /bin/bash -c "source /usr/local/lib//app_env/bin/activate && python -u script.py"
