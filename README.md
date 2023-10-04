@@ -8,4 +8,7 @@ python3 -m venv app_env
 source /app_env/bin/activate
 pip3 install python_packages
 python -u /app/script.py
+
+# when "can't find module named pip" message occured, run:
+python -m ensurepip --upgrade
 ```
